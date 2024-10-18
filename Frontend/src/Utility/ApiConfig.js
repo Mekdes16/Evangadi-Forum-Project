@@ -1,7 +1,11 @@
 import axios from "axios";
 
 const axiosBaseURL = axios.create({
-  baseURL: "https://evangadi-forum-2-yels.onrender.com" + "/api",
+  // local end point reference
+  // baseURL: "https://evangadi-forum-2-yels.onrender.com" + "/api",
+
+  // deployed endpoint reference
+  baseURL: "https://evangadi-forum-project-xtw9.onrender.com" + "/api",
 });
 
 export default axiosBaseURL;
