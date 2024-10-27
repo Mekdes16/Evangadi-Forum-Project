@@ -10,8 +10,6 @@ import { createContext } from "react";
 import axiosBaseURL from "../Utility/ApiConfig";
 import HowItWorks from "../components/How it works/Howitworks";
 
-
-
 export const AppState = createContext();
 
 function RouterApp() {
@@ -29,13 +27,9 @@ function RouterApp() {
       setUser(data);
     } catch (error) {
       console.log(error.response);
-      navigate("/login");
+      navigate("/auth");
     }
   }
-
-  useEffect(() => {
-    checkUser();
-  }, []);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -43,6 +37,10 @@ function RouterApp() {
       checkUser(); // Check user only if a token exists
     }
   }, []); // This runs once on mount
+
+  useEffect(() => {
+    checkUser();
+  }, []);
 
   const handleLogin = async (userData) => {
     localStorage.setItem("token", userData.token);
