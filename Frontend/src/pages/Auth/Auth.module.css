@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: auto;
   padding: 20px;
   background: url("../../assets/10001.svg");
   background-position: center;
@@ -30,7 +30,7 @@
   .authContainer {
     display: block;
     width: 85vw;
-    height: 70vh;
+    height: auto;
   }
   .authContent {
     display: block;
